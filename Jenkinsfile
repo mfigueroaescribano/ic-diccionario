@@ -24,9 +24,9 @@ pipeline {
             }
         }
     }
-    post {
+        post {
          always {
-          mail to: 'josedom24@josedomingo.org',
+          mail to: 'miguel@mfecloud.es',
           subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
           body: "${env.BUILD_URL} has result ${currentBuild.result}"
         }
