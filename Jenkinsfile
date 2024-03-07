@@ -24,11 +24,4 @@ pipeline {
             }
         }
     }
-        post {
-         always {
-          mail to: 'miguel@mfecloud.es',
-          subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
-          body: "${env.BUILD_URL} has result ${currentBuild.result}"
-        }
-      }
 }
